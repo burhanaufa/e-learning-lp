@@ -18,4 +18,8 @@ class Materi extends Model
     {
         return $this->hasMany('App\Pertanyaan');
     }
+    public function nilai()
+    {
+        return $this->hasMany('App\Nilai');
+    }
 }

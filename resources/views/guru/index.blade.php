@@ -8,7 +8,7 @@
         <tr>
             <td>ID</td>
             <td>Nama Guru</td>
-            <td>Email</td>
+            <td>Nip</td>
             <td>Mapel</td>
             <td colspan="2">Action</td>
         </tr>
@@ -23,7 +23,7 @@
                 <tr>
                     <td>{!!$gu->id!!}</td>
                     <td>{!!$gu->name!!}</td>
-                    <td>{!!$gu->email!!}</td>
+                    <td>{!!$gu->nip!!}</td>
                     <td>{!!$gu->mapels_id!!}</td>
                 <td><a href="{{ route('guru.edit',$gu->id)}}"class="btn btn-primary">Edit</a></td>
                 <td>

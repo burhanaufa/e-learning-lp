@@ -14,8 +14,8 @@
             </select>
         </div>
         <div class="form-group">
-            {!!Form::label('pertanyaans_id','No Pertanyaan') !!}
-            {!!Form::text('pertanyaans_id','', ['single' => 'single', 'class' =>'form-control pertanyaan'])!!}
+            {!!Form::label('pertanyaan_id','No Pertanyaan') !!}
+            {!!Form::text('pertanyaan_id','', ['single' => 'single', 'class' =>'form-control pertanyaan'])!!}
         </div>
         {{Form::submit('submit',['class'=>'btn btn-primary'])}}
     {!! Form::close() !!}

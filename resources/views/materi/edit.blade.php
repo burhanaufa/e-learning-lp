@@ -19,12 +19,12 @@
         {{Form::submit('submit',['class'=>'btn btn-primary'])}}
     {!! Form::close() !!}
     <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
-    <script>
-        CKEDITOR.replace( 'konten_materi',{
+<script type="text/javascript">
+    CKEDITOR.replace( 'konten_materi',{
     filebrowserImageBrowseUrl: '/laravel-filemanager',
     filebrowserImageUploadUrl: '/laravel-filemanager',
     filebrowserBrowseUrl: '/laravel-filemanager',
     filebrowserUploadUrl: '/laravel-filemanager'
 });
-    </script>
+</script>
 @endsection

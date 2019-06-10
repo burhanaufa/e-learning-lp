@@ -1,6 +1,3 @@
-@php
-    // dd($course); 
-@endphp
 
 @extends('layouts.app')
 
@@ -16,7 +13,7 @@
         <img src="/img/Tatan.jpg" class="img elevation-3">
       </div>
       <div class="card-body">
-        <h1><a href="{{ url('/kuis', $cour->id) }}">
+        <h1><a href="{{ url('/materiquiz', $cour->id) }}">
             {{$cour->nama_materi}}</h1></a>
       </div>
     </div>

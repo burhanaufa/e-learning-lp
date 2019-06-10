@@ -25,14 +25,14 @@ class GuruLoginController extends Controller
     public function login(Request $request)
     {
         $this->validate($request, [
-            'email'  => 'required|email',
+            'nip'  => 'required',
             'password' => 'required|min:6'
         ]);
 
-       if (Auth::guard('siswa')->attempt(['email' => $request->email, 'password' =>$request->password], $request->remember)) {
+       if (Auth::guard('guru')->attempt(['nip' => $request->nip, 'password' =>$request->password], $request->remember)) {
         return redirect()->intended(route('guru.dashboard'));
        }
-       return redirect()->back()->withInput($request->only('email','remember'));
+       return redirect()->back()->withInput($request->only('nip','remember'));
     }
     public function logout()
     {

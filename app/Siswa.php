@@ -31,7 +31,7 @@ class Siswa extends Authenticatable
 
     protected $fillable = [
 
-        'name', 'email', 'password',
+        'name', 'nis', 'password',
 
     ];
 
@@ -66,5 +66,9 @@ class Siswa extends Authenticatable
     {
         return $this->belongsToMany('App\Guru');
     }
+    public function nilai()
+     {
+         return $this->hasMany('App\Nilai');
+     }
 
 }

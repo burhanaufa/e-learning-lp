@@ -88,7 +88,7 @@ class PertanyaanController extends Controller
     {
         $this->validate($request,[
             'isi_pertanyaan' => 'required',
-            'materis_id' => 'materis_id'
+            'materis_id' => 'required'
         ]);
         $pertanyaan = Pertanyaan::find($id);
         $pertanyaan ->isi_pertanyaan = $request->input('isi_pertanyaan');

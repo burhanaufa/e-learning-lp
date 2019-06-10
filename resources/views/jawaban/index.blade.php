@@ -22,7 +22,7 @@
         <tr>
             <td>{{$jaw->id}}</td>
             <td>{!!$jaw->isi_jawaban!!}</td>
-            <td>{{$jaw->pertanyaans_id}}</td>
+            <td>{{$jaw->pertanyaan_id}}</td>
             <td><a href="{{ route('jawaban.show',$jaw->id)}}"class="btn btn-primary">Show</a></td>
             <td><a href="{{ route('jawaban.edit',$jaw->id)}}"class="btn btn-primary">Edit</a></td>
             <td>

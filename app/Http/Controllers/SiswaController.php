@@ -47,13 +47,13 @@ class SiswaController extends Controller
     {
         $this->validate($request,[
             'name' => 'required',
-            'email' => 'required|email',
+            'nis' => 'required|integer',
             'password' => 'required'
         ]);
 
         $siswa = new Siswa;
         $siswa->name = $request->name;
-        $siswa->email = $request->email;
+        $siswa->nis = $request->nis;
         $siswa->password = $request->password;
         $siswa->save();
         $siswa->mapel()->sync($request->mapel);
@@ -98,13 +98,13 @@ class SiswaController extends Controller
     {
         $this->validate($request,[
             'name'=>'required',
-            'email'=> 'required|email',
+            'nis'=> 'required|integer',
             'password' => 'required'
           ]);
 
           $siswa = Siswa::find($id);
           $siswa->name = $request->get('name');
-          $siswa->email = $request->get('email');
+          $siswa->nis = $request->get('nis');
           $siswa->password = $request->get('password');
           $siswa->save();
           $siswa->mapel()->sync($request->mapel);

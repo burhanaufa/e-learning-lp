@@ -24,7 +24,7 @@ class MateriController extends Controller
     }
 
     public function convertToPDF(){
-        $pdf = new Pdf('C:/xampp/htdocs/e-learning/pdf/ArtkelJurnalAriAmbarwati-Kembara-UMM.pdf', [
+        $pdf = new Pdf('C:/xampp/htdocs/e-learning/pdf/virus.pdf', [
             'pdftohtml_path' => 'C:/xampp/htdocs/e-learning/poppler-0.68.0/bin/pdftohtml.exe',
             'pdfinfo_path' => 'C:/xampp/htdocs/e-learning/poppler-0.68.0/bin/pdfinfo.exe',
             'generate' => [ // settings for generating html
@@ -117,6 +117,7 @@ class MateriController extends Controller
      */
     public function edit($id)
     {
+        // $pdf = $this->convertToPDF();
         $materi = Materi::find($id);
         return view ('materi.edit')->with('materi',$materi);
     }

@@ -6,11 +6,10 @@
     <h1>Materi</h1>
     <div>
         {!!$materi->konten_materi!!}
-        <a href="{{url('/kuis', $materi->id)}}" class="btn btn-primary">Go to Quiz</a>
     </div>
     <div>
-        {{-- {!!$materi->mapels_id!!} --}}
-    </div>
+    <a href="{{url('/kuis', $materi->id)}}" class="btn btn-primary">Go to Quiz</a>
+</div>
 
 @endsection
 

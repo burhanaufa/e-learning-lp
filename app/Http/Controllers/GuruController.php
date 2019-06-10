@@ -43,13 +43,13 @@ class GuruController extends Controller
     {
         $this->validate($request,[
             'name' => 'required',
-            'email' => 'required|email',
+            'nip' => 'required|integer',
             'password' => 'required'
         ]);
 
         $guru = new Guru;
         $guru->name = $request->name;
-        $guru->email = $request->email;
+        $guru->nip = $request->nip;
         $guru->password = $request->password;
         $guru->mapels_id = $request->mapels_id;
 
@@ -93,13 +93,13 @@ class GuruController extends Controller
     {
         $this->validate($request,[
             'name' => 'required',
-            'email' => 'required|email',
+            'nip' => 'required|integer',
             'password' => 'required',
 
         ]);
         $guru = Guru::find($id);
         $guru->name = $request->input('name');
-        $guru->email = $request->input('email');
+        $guru->nip = $request->input('nip');
         $guru->password = $request->input('password');
         $guru->mapels_id = $request->input('mapels_id');
         $guru->save();

@@ -42,14 +42,14 @@ class JawabanController extends Controller
     {
         $this->validate($request,[
             'isi_jawaban' => 'required',
-            'pertanyaans_id' => 'required', 
+            'pertanyaan_id' => 'required', 
             'isTrue' => 'boolean'  
         ]);
 
         $jawaban = new Jawaban;
         $jawaban->isi_jawaban = $request->get('isi_jawaban');
         $jawaban->isTrue = $request->get('isTrue');     
-        $jawaban->pertanyaan_id = $request->get('pertanyaans_id');
+        $jawaban->pertanyaan_id = $request->get('pertanyaan_id');
         $jawaban->save();
 
         return redirect('/jawaban')->with('success', 'New Answers Added');
@@ -90,11 +90,11 @@ class JawabanController extends Controller
     {
         $this->validate($request,[
             'isi_jawaban' => 'required',
-            'pertanyaans_id' => 'required'
+            'pertanyaan_id' => 'required'
         ]);
         $jawaban = Jawaban::find($id);
         $jawaban->isi_jawaban = $request->get('isi_jawaban');
-        $jawaban->pertanyaans_id = $request->get('pertanyaans_id');
+        $jawaban->pertanyaan_id = $request->get('pertanyaan_id');
         $jawaban->save();
 
         return redirect('/jawaban')->with('success', 'New Answers Updated');

@@ -50,6 +50,7 @@ Route::resource('/guru_siswa', 'Guru_SiswaController');
 Route::get('/admin','AdminController@index')->name('admin');
 Route::get('/dashboard', 'MapelController@Dashboard')->name('dashboard');
 Route::get('/course/{id}', 'CourseController@index');
+Route::get('/materiquiz/{id}', 'CourseController@materiquiz');
 Route::get('/kuis/{id}','CourseController@kuis');
 
 
