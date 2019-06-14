@@ -105,7 +105,6 @@ class MateriController extends Controller
     public function show($id)
     {
         $materi = Materi::find($id);
-        // dd($materi);
         return view ('materi.show')->with ('materi',$materi);
     }
 
@@ -117,7 +116,6 @@ class MateriController extends Controller
      */
     public function edit($id)
     {
-        // $pdf = $this->convertToPDF();
         $materi = Materi::find($id);
         return view ('materi.edit')->with('materi',$materi);
     }

@@ -33,12 +33,7 @@
         </div><!-- /.container-fluid -->
       </div>
     </div>
-    <!-- <main class="py-4">
-
-    </main> -->
   </div>
-
-  <!-- REQUIRED SCRIPTS -->
 
 </body>
 @include('inc.footer')
